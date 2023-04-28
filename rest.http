@@ -1,8 +1,14 @@
 GET http://localhost:3000
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODI1Mzg5NzMsImV4cCI6MTY4MjU0MDc3MywiYXVkIjoiNjQ0OTM2N2E1NTNlY2UyMDc1YjNmZjNjIiwiaXNzIjoiZmFjZWJvb2suY29tIn0.dPq3TNSN_EpgfT4S814gwlEKf6ooD5VCZLIokF3GK6I
 ### Login Route
 
 POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+   "email": "salmankhan4@gmail.com",
+   "password": "salman123"
+}
 
 ### Register Route
 
@@ -10,15 +16,24 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-   "email": "usmanhaiderkhan@gmail.com",
-   "password":"12345"
+   "email": "newuser@gmail.com",
+   "password":"new123"
 }
 
 
 ### Refresh-Token Route
-
 POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+   "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODI1Mzg5NzMsImV4cCI6MTcxNDA5NjU3MywiYXVkIjoiNjQ0OTM2N2E1NTNlY2UyMDc1YjNmZjNjIiwiaXNzIjoiZmFjZWJvb2suY29tIn0.PLpH38RMFByIIHwQF6f7hwQ0WfxFDYQADXHZF52EkZU"
+}
 
 ### Logout Route
 
 DELETE  http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+   "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODI1Mzg5NzMsImV4cCI6MTcxNDA5NjU3MywiYXVkIjoiNjQ0OTM2N2E1NTNlY2UyMDc1YjNmZjNjIiwiaXNzIjoiZmFjZWJvb2suY29tIn0.PLpH38RMFByIIHwQF6f7hwQ0WfxFDYQADXHZF52EkZU"
+}
